@@ -8,8 +8,8 @@
     <title>Kerama Islands Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- PWA Manifest (inline) -->
-    <link rel="manifest" id="manifest-placeholder">
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Kerama%20Islands%20Guide%22%2C%22short_name%22%3A%22KeramaGuide%22%2C%22description%22%3A%22Tourism%20guide%20for%20Okinawa%27s%20Kerama%20Islands%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23006D8F%22%2C%22theme_color%22%3A%22%23006D8F%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Crect%20width%3D%27100%27%20height%3D%27100%27%20fill%3D%27%23006D8F%27%2F%3E%3Ccircle%20cx%3D%2750%27%20cy%3D%2730%27%20r%3D%2715%27%20fill%3D%27white%27%2F%3E%3Cpath%20d%3D%27M50%2045%20L45%2065%20L55%2065%20Z%27%20fill%3D%27white%27%2F%3E%3Cpath%20d%3D%27M50%2050%20L35%2030%20L40%2025%20L50%2040%20L60%2025%20L65%2030%20Z%27%20fill%3D%27white%27%2F%3E%3C%2Fsvg%3E%22%2C%22sizes%22%3A%22100x100%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%7D%2C%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20192%20192%27%3E%3Crect%20width%3D%27192%27%20height%3D%27192%27%20fill%3D%27%23006D8F%27%2F%3E%3Ccircle%20cx%3D%2796%27%20cy%3D%2758%27%20r%3D%2729%27%20fill%3D%27white%27%2F%3E%3Cpath%20d%3D%27M96%2086%20L86%20125%20L106%20125%20Z%27%20fill%3D%27white%27%2F%3E%3Cpath%20d%3D%27M96%2096%20L74%2058%20L77%2048%20L96%2077%20L115%2048%20L118%2058%20Z%27%20fill%3D%27white%27%2F%3E%3C%2Fsvg%3E%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%7D%2C%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20512%20512%27%3E%3Crect%20width%3D%27512%27%20height%3D%27512%27%20fill%3D%27%23006D8F%27%2F%3E%3Ccircle%20cx%3D%27256%27%20cy%3D%27154%27%20r%3D%2777%27%20fill%3D%27white%27%2F%3E%3Cpath%20d%3D%27M256%20231%20L231%20321%20L281%20321%20Z%27%20fill%3D%27white%27%2F%3E%3Cpath%20d%3D%27M256%20256%20L197%20154%20L205%20128%20L256%20205%20L307%20128%20L315%20154%20Z%27%20fill%3D%27white%27%2F%3E%3C%2Fsvg%3E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%7D%5D%7D">
     
     <!-- Favicon and PWA icons -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23006D8F'/><circle cx='50' cy='30' r='15' fill='white'/><path d='M50 45 L45 65 L55 65 Z' fill='white'/><path d='M50 50 L35 30 L40 25 L50 40 L60 25 L65 30 Z' fill='white'/></svg>">
@@ -269,18 +269,24 @@
             background-color: var(--primary);
             color: white;
             border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
+            padding: 0.8rem 1.2rem;
+            border-radius: 30px;
             cursor: pointer;
             font-weight: bold;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            font-size: 0.9rem;
         }
         
         #install-button:hover {
             background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        #install-button i {
+            font-size: 1.1rem;
         }
     </style>
 </head>
@@ -552,7 +558,6 @@
             </div>
         </section>
         
-        <!-- 最初に戻るボタン -->
         <div class="to-top-container">
             <a href="#" class="to-top-button" id="main-to-top">
                 <span lang="en"><i class="fas fa-arrow-up"></i> Back to Top</span>
@@ -570,7 +575,6 @@
         <i class="fas fa-arrow-up"></i>
     </div>
     
-    <!-- Install button container -->
     <div id="install-container">
         <button id="install-button" class="hidden">
             <i class="fas fa-download"></i>
@@ -580,7 +584,7 @@
     </div>
     
     <script>
-        // Set current date
+        // 日付設定
         const today = new Date();
         document.getElementById('current-date').textContent = today.toLocaleDateString('en-US', { 
             year: 'numeric', 
@@ -593,14 +597,13 @@
             day: 'numeric' 
         });
         
-        // Theme toggle
+        // テーマ切り替え
         const themeToggle = document.getElementById('theme-toggle');
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', newTheme);
             
-            const isEnglish = document.documentElement.getAttribute('lang') === 'en';
             if (newTheme === 'dark') {
                 themeToggle.querySelector('span[lang="en"]').textContent = 'Dark Mode';
                 themeToggle.querySelector('span[lang="ja"]').textContent = 'ダークモード';
@@ -610,14 +613,13 @@
             }
         });
         
-        // Language toggle
+        // 言語切り替え
         const langToggle = document.getElementById('lang-toggle');
         langToggle.addEventListener('click', () => {
             const currentLang = document.documentElement.getAttribute('lang');
             const newLang = currentLang === 'en' ? 'ja' : 'en';
             document.documentElement.setAttribute('lang', newLang);
             
-            // Toggle visibility of language-specific elements
             document.querySelectorAll('[lang="en"]').forEach(el => {
                 el.classList.toggle('hidden', newLang !== 'en');
             });
@@ -625,7 +627,6 @@
                 el.classList.toggle('hidden', newLang !== 'ja');
             });
             
-            // Update button text
             if (newLang === 'en') {
                 langToggle.querySelector('span[lang="en"]').textContent = '日本語';
                 langToggle.querySelector('span[lang="ja"]').textContent = 'English';
@@ -634,105 +635,105 @@
                 langToggle.querySelector('span[lang="ja"]').textContent = '英語';
             }
             
-            // Update theme button text
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            if (currentTheme === 'dark') {
-                themeToggle.querySelector('span[lang="en"]').textContent = 'Dark Mode';
-                themeToggle.querySelector('span[lang="ja"]').textContent = 'ダークモード';
-            } else {
-                themeToggle.querySelector('span[lang="en"]').textContent = 'Light Mode';
-                themeToggle.querySelector('span[lang="ja"]').textContent = 'ライトモード';
-            }
-            
-            // Update install button text
-            const installButton = document.getElementById('install-button');
-            if (installButton) {
-                if (newLang === 'en') {
-                    installButton.querySelector('span[lang="en"]').textContent = 'Install App';
-                    installButton.querySelector('span[lang="ja"]').textContent = 'アプリをインストール';
-                } else {
-                    installButton.querySelector('span[lang="en"]').textContent = 'Install';
-                    installButton.querySelector('span[lang="ja"]').textContent = 'インストール';
-                }
-            }
+            updateInstallButtonText();
         });
         
-        // Back to top buttons
+        // トップに戻るボタン
         const backToTop = document.getElementById('back-to-top');
         const mainToTop = document.getElementById('main-to-top');
         
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTop.style.display = 'flex';
-            } else {
-                backToTop.style.display = 'none';
-            }
+            backToTop.style.display = window.pageYOffset > 300 ? 'flex' : 'none';
         });
         
         backToTop.addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         
         mainToTop.addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         
-        // Inline manifest (PWA)
-        const manifest = {
-            "name": "Kerama Islands Guide",
-            "short_name": "KeramaGuide",
-            "description": "Tourism guide for Okinawa's Kerama Islands",
-            "start_url": ".",
-            "display": "standalone",
-            "background_color": "#006D8F",
-            "theme_color": "#006D8F",
-            "icons": [
-                {
-                    "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23006D8F'/><circle cx='50' cy='30' r='15' fill='white'/><path d='M50 45 L45 65 L55 65 Z' fill='white'/><path d='M50 50 L35 30 L40 25 L50 40 L60 25 L65 30 Z' fill='white'/></svg>",
-                    "sizes": "100x100",
-                    "type": "image/svg+xml"
-                },
-                {
-                    "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' fill='%23006D8F'/><circle cx='96' cy='58' r='29' fill='white'/><path d='M96 86 L86 125 L106 125 Z' fill='white'/><path d='M96 96 L74 58 L77 48 L96 77 L115 48 L118 58 Z' fill='white'/></svg>",
-                    "sizes": "192x192",
-                    "type": "image/svg+xml"
-                },
-                {
-                    "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' fill='%23006D8F'/><circle cx='256' cy='154' r='77' fill='white'/><path d='M256 231 L231 321 L281 321 Z' fill='white'/><path d='M256 256 L197 154 L205 128 L256 205 L307 128 L315 154 Z' fill='white'/></svg>",
-                    "sizes": "512x512",
-                    "type": "image/svg+xml"
+        // PWAインストール機能
+        let deferredPrompt;
+        const installButton = document.getElementById('install-button');
+        
+        // インストールボタンテキスト更新
+        function updateInstallButtonText() {
+            const currentLang = document.documentElement.getAttribute('lang');
+            const enText = installButton.querySelector('span[lang="en"]');
+            const jaText = installButton.querySelector('span[lang="ja"]');
+            
+            if (currentLang === 'ja') {
+                enText.classList.add('hidden');
+                jaText.classList.remove('hidden');
+            } else {
+                enText.classList.remove('hidden');
+                jaText.classList.add('hidden');
+            }
+        }
+        
+        // beforeinstallpromptイベント処理
+        window.addEventListener('beforeinstallprompt', (e) => {
+            console.log('beforeinstallprompt event triggered');
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // インストールボタンを表示
+            installButton.classList.remove('hidden');
+            updateInstallButtonText();
+            
+            // 5秒後に自動で非表示にする
+            setTimeout(() => {
+                if (installButton && !installButton.classList.contains('hidden')) {
+                    installButton.classList.add('hidden');
                 }
-            ]
-        };
+            }, 5000);
+        });
         
-        // Set the manifest
-        const manifestElement = document.createElement('link');
-        manifestElement.rel = 'manifest';
-        manifestElement.href = 'data:application/manifest+json,' + encodeURIComponent(JSON.stringify(manifest));
-        document.head.appendChild(manifestElement);
+        // インストールボタンクリック処理
+        installButton.addEventListener('click', async () => {
+            if (!deferredPrompt) {
+                console.log('No deferred prompt available');
+                return;
+            }
+            
+            console.log('Showing install prompt');
+            deferredPrompt.prompt();
+            
+            const { outcome } = await deferredPrompt.userChoice;
+            console.log(`User response: ${outcome}`);
+            
+            deferredPrompt = null;
+            installButton.classList.add('hidden');
+        });
         
-        // Service worker registration (inline)
+        // アプリインストール後の処理
+        window.addEventListener('appinstalled', () => {
+            console.log('PWA was installed');
+            installButton.classList.add('hidden');
+            deferredPrompt = null;
+        });
+        
+        // Service Worker登録
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                // Create an inline service worker
-                const swUrl = URL.createObjectURL(new Blob([
-                    `self.addEventListener('install', (event) => {
+                // シンプルなService Workerコード
+                const swCode = `
+                    self.addEventListener('install', (event) => {
+                        console.log('Service Worker installing');
                         event.waitUntil(self.skipWaiting());
                     });
                     
                     self.addEventListener('activate', (event) => {
+                        console.log('Service Worker activating');
                         event.waitUntil(self.clients.claim());
                     });
                     
                     self.addEventListener('fetch', (event) => {
+                        console.log('Fetching:', event.request.url);
                         event.respondWith(
                             fetch(event.request).catch(() => {
                                 return new Response('You are offline. Please check your internet connection.', {
@@ -740,62 +741,49 @@
                                 });
                             })
                         );
-                    });`
-                ], { type: 'application/javascript' }));
+                    });
+                `;
                 
-                navigator.serviceWorker.register(swUrl)
+                const blob = new Blob([swCode], { type: 'application/javascript' });
+                const swUrl = URL.createObjectURL(blob);
+                
+                navigator.serviceWorker.register(swUrl, { scope: './' })
                     .then(registration => {
-                        console.log('ServiceWorker registration successful');
+                        console.log('ServiceWorker registration successful with scope:', registration.scope);
                     })
-                    .catch(err => {
-                        console.log('ServiceWorker registration failed: ', err);
+                    .catch(error => {
+                        console.log('ServiceWorker registration failed:', error);
                     });
             });
         }
         
-        // Install prompt handling
-        let deferredPrompt;
-        const installButton = document.getElementById('install-button');
-        
-        window.addEventListener('beforeinstallprompt', (e) => {
-            // Prevent the mini-infobar from appearing on mobile
-            e.preventDefault();
-            // Stash the event so it can be triggered later
-            deferredPrompt = e;
-            // Show the install button
-            installButton.classList.remove('hidden');
-            
-            // Update button text based on current language
-            const currentLang = document.documentElement.getAttribute('lang');
-            if (currentLang === 'ja') {
-                installButton.querySelector('span[lang="en"]').classList.add('hidden');
-                installButton.querySelector('span[lang="ja"]').classList.remove('hidden');
-            } else {
-                installButton.querySelector('span[lang="en"]').classList.remove('hidden');
-                installButton.querySelector('span[lang="ja"]').classList.add('hidden');
+        // PWAインストール可能かチェック
+        function checkPWAInstallable() {
+            if (window.matchMedia('(display-mode: standalone)').matches) {
+                console.log('Already installed as PWA');
+                installButton.classList.add('hidden');
+                return;
             }
-        });
+            
+            // iOSではbeforeinstallpromptが発火しないので特別処理
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
+                         (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+            
+            if (isIOS) {
+                console.log('iOS device detected - showing custom install instructions');
+                installButton.classList.remove('hidden');
+                updateInstallButtonText();
+                
+                installButton.addEventListener('click', () => {
+                    alert(document.documentElement.getAttribute('lang') === 'ja' ? 
+                        'Safariで「共有」→「ホーム画面に追加」を選択してください' : 
+                        'In Safari, tap "Share" then "Add to Home Screen"');
+                });
+            }
+        }
         
-        installButton.addEventListener('click', (e) => {
-            // Hide the install button
-            installButton.classList.add('hidden');
-            // Show the install prompt
-            deferredPrompt.prompt();
-            // Wait for the user to respond to the prompt
-            deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                    console.log('User accepted the install prompt');
-                } else {
-                    console.log('User dismissed the install prompt');
-                }
-                deferredPrompt = null;
-            });
-        });
-        
-        window.addEventListener('appinstalled', (evt) => {
-            console.log('App was installed');
-            installButton.classList.add('hidden');
-        });
+        // 初期化時にチェック
+        checkPWAInstallable();
     </script>
 </body>
 </html>

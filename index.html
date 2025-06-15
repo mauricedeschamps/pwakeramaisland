@@ -8,15 +8,14 @@
     <title>Kerama Islands Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Kerama%20Islands%20Guide%22%2C%22short_name%22%3A%22KeramaGuide%22%2C%22description%22%3A%22Tourism%20guide%20for%20Okinawa%27s%20Kerama%20Islands%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23006D8F%22%2C%22theme_color%22%3A%22%23006D8F%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Crect%20width%3D%27100%27%20height%3D%27100%27%20fill%3D%27%23006D8F%27%2F%3E%3Ccircle%20cx%3D%2750%27%20cy%3D%2730%27%20r%3D%2715%27%20fill%3D%27white%27%2F%3E%3Cpath%20d%3D%27M50%2045%20L45%2065%20L55%2065%20Z%27%20fill%3D%27white%27%2F%3E%3Cpath%20d%3D%27M50%2050%20L35%2030%20L40%2025%20L50%2040%20L60%2025%20L65%2030%20Z%27%20fill%3D%27white%27%2F%3E%3C%2Fsvg%3E%22%2C%22sizes%22%3A%22100x100%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%7D%2C%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20192%20192%27%3E%3Crect%20width%3D%27192%27%20height%3D%27192%27%20fill%3D%27%23006D8F%27%2F%3E%3Ccircle%20cx%3D%2796%27%20cy%3D%2758%27%20r%3D%2729%27%20fill%3D%27white%27%2F%3E%3Cpath%20d%3D%27M96%2086%20L86%20125%20L106%20125%20Z%27%20fill%3D%27white%27%2F%3E%3Cpath%20d%3D%27M96%2096%20L74%2058%20L77%2048%20L96%2077%20L115%2048%20L118%2058%20Z%27%20fill%3D%27white%27%2F%3E%3C%2Fsvg%3E%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%7D%2C%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20512%20512%27%3E%3Crect%20width%3D%27512%27%20height%3D%27512%27%20fill%3D%27%23006D8F%27%2F%3E%3Ccircle%20cx%3D%27256%27%20cy%3D%27154%27%20r%3D%2777%27%20fill%3D%27white%27%2F%3E%3Cpath%20d%3D%27M256%20231%20L231%20321%20L281%20321%20Z%27%20fill%3D%27white%27%2F%3E%3Cpath%20d%3D%27M256%20256%20L197%20154%20L205%20128%20L256%20205%20L307%20128%20L315%20154%20Z%27%20fill%3D%27white%27%2F%3E%3C%2Fsvg%3E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%7D%5D%7D">
+    <!-- PWA Manifest (inline) -->
+    <link rel="manifest" id="manifest-placeholder">
     
     <!-- Favicon and PWA icons -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23006D8F'/><circle cx='50' cy='30' r='15' fill='white'/><path d='M50 45 L45 65 L55 65 Z' fill='white'/><path d='M50 50 L35 30 L40 25 L50 40 L60 25 L65 30 Z' fill='white'/></svg>">
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23006D8F'/><circle cx='50' cy='30' r='15' fill='white'/><path d='M50 45 L45 65 L55 65 Z' fill='white'/><path d='M50 50 L35 30 L40 25 L50 40 L60 25 L65 30 Z' fill='white'/></svg>">
     
     <style>
-        /* スタイルは前回と同じ */
         :root {
             --primary: #006D8F;
             --secondary: #003D4D;
@@ -270,24 +269,18 @@
             background-color: var(--primary);
             color: white;
             border: none;
-            padding: 0.8rem 1.2rem;
-            border-radius: 30px;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            font-size: 0.9rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
         
         #install-button:hover {
             background-color: var(--secondary);
-            transform: translateY(-2px);
-        }
-        
-        #install-button i {
-            font-size: 1.1rem;
         }
     </style>
 </head>
@@ -304,7 +297,6 @@
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4E5n8zGzQTe9ldQcy6GUvZ93UW6rhL2X3W_K-_Bpb8OSN9MJ6NiRNH68&s=10">
 
     <div class="container">
-        <!-- コンテンツ部分は前回と同じ -->
         <section class="card">
             <h2 lang="en">Kerama Islands Map</h2>
             <h2 lang="ja" class="hidden">慶良間諸島マップ</h2>
@@ -318,8 +310,255 @@
             <p lang="ja" class="hidden">慶良間諸島は沖縄本島の西約40kmに位置する22の島々からなる群島です。観光の主要な島は座間味島、阿嘉島、渡嘉敷島の3つです。</p>
         </section>
         
-        <!-- 他のセクションも同様に保持 -->
+        <section class="card">
+            <h2 lang="en">Tomari Port Information</h2>
+            <h2 lang="ja" class="hidden">泊港情報</h2>
+            <p class="update-date" lang="en">Last updated: <span id="current-date"></span></p>
+            <p class="update-date" lang="ja" class="hidden">最終更新: <span id="current-date-ja"></span></p>
+            
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdAPNXL3ILqwI2CH6cmSzM6forL81hyKfkydVy27cFtor2s9yr9KlCL9Hk&s=10">
+            
+            <h3 lang="en">Access from Naha Airport</h3>
+            <h3 lang="ja" class="hidden">那覇空港からのアクセス</h3>
+            
+            <div class="transport-option">
+                <div class="transport-icon"><i class="fas fa-bus"></i></div>
+                <div class="transport-info">
+                    <p lang="en"><strong>Bus:</strong> Take bus #99 (Airport Shuttle) from Naha Airport to Tomari Port (about 25 minutes, ¥260)</p>
+                    <p lang="ja" class="hidden"><strong>バス:</strong> 那覇空港から99番バス（空港シャトル）で泊港まで（約25分、260円）</p>
+                </div>
+            </div>
+            
+            <div class="transport-option">
+                <div class="transport-icon"><i class="fas fa-bus"></i></div>
+                <div class="transport-info">
+                    <p lang="en"><strong>Bus:</strong> Take bus #120 (Kokusaidori Line) from Naha Airport to Tomari Port (about 30 minutes, ¥260)</p>
+                    <p lang="ja" class="hidden"><strong>バス:</strong> 那覇空港から120番バス（国際通り線）で泊港まで（約30分、260円）</p>
+                </div>
+            </div>
+            
+            <h3 lang="en">Access from Miebashi Station (Yui Rail)</h3>
+            <h3 lang="ja" class="hidden">美栄橋駅からのアクセス</h3>
+            
+            <div class="transport-option">
+                <div class="transport-icon"><i class="fas fa-walking"></i></div>
+                <div class="transport-info">
+                    <p lang="en"><strong>Walking:</strong> About 15 minutes (1.2km) from Miebashi Station</p>
+                    <p lang="ja" class="hidden"><strong>徒歩:</strong> 美栄橋駅から約15分 (1.2km)</p>
+                </div>
+            </div>
+            
+            <div class="transport-option">
+                <div class="transport-icon"><i class="fas fa-bus"></i></div>
+                <div class="transport-info">
+                    <p lang="en"><strong>Bus:</strong> Take bus #1, #2, or #5 from Miebashi Station (about 5 minutes)</p>
+                    <p lang="ja" class="hidden"><strong>バス:</strong> 美栄橋駅から1番、2番、5番バスに乗車 (約5分)</p>
+                </div>
+            </div>
+            
+            <h3 lang="en">Ferry Terminals</h3>
+            <h3 lang="ja" class="hidden">フェリー乗り場</h3>
+            <ul class="facility-list">
+                <li lang="en">Terminal 1: Zamami and Aka Islands (Queen Zamami, Marine Liner)</li>
+                <li lang="ja" class="hidden">第1ターミナル: 座間味島・阿嘉島行き (クイーンざまみ、マリンライナー)</li>
+                <li lang="en">Terminal 2: Tokashiki Island (Tokashiki-maru, Ferry Tokashiki)</li>
+                <li lang="ja" class="hidden">第2ターミナル: 渡嘉敷島行き (とかしく丸、フェリーとかしく)</li>
+                <li lang="en">Terminal 3: High-speed boats (Zamami, Aka, and Tokashiki Islands)</li>
+                <li lang="ja" class="hidden">第3ターミナル: 高速船 (座間味島・阿嘉島・渡嘉敷島行き)</li>
+            </ul>
+            
+            <h3 lang="en">Ferry Schedule (Sample)</h3>
+            <h3 lang="ja" class="hidden">フェリースケジュール (例)</h3>
+            <table class="ferry-table">
+                <thead>
+                    <tr>
+                        <th lang="en">Destination</th>
+                        <th lang="ja" class="hidden">行先</th>
+                        <th lang="en">Departure Time</th>
+                        <th lang="ja" class="hidden">出発時間</th>
+                        <th lang="en">Duration</th>
+                        <th lang="ja" class="hidden">所要時間</th>
+                        <th lang="en">Fare (¥)</th>
+                        <th lang="ja" class="hidden">運賃 (¥)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Zamami</td>
+                        <td>09:00, 11:00, 14:30</td>
+                        <td>70 min</td>
+                        <td>3,140</td>
+                    </tr>
+                    <tr>
+                        <td>Aka</td>
+                        <td>09:00, 11:00, 14:30</td>
+                        <td>50 min</td>
+                        <td>2,820</td>
+                    </tr>
+                    <tr>
+                        <td>Tokashiki</td>
+                        <td>10:00, 12:30, 16:00</td>
+                        <td>35 min</td>
+                        <td>2,470</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 lang="en">Accommodation Near Tomari Port</h3>
+            <h3 lang="ja" class="hidden">泊港近くの宿泊施設</h3>
+            <p><strong>MY PLACE</strong> <span lang="en">- Budget accommodation located north of Tomari Port. Offers dormitory beds and private rooms. Just beside High Speed ​​Boat Terminal 3.</span><span lang="ja" class="hidden">- 泊港の北側にある格安宿泊施設。ドミトリーとプライベートルームがあります。高速艇乗り場の前徒歩0分。</span></p>
+            <p lang="en">Address: 3-12-12 Maejima, Naha, Okinawa</p>
+            <p lang="ja" class="hidden">住所: 沖縄県那覇市前島3-12-12</p>
+            <p lang="en">Phone: 098-123-4567</p>
+            <p lang="ja" class="hidden">電話: 098-123-4567</p>
+        </section>
         
+        <section class="card">
+            <h2 lang="en">Inter-Island Transportation</h2>
+            <h2 lang="ja" class="hidden">島間移動</h2>
+            
+            <h3 lang="en">Between Zamami and Aka Islands</h3>
+            <h3 lang="ja" class="hidden">座間味島と阿嘉島間</h3>
+            <p lang="en">Regular ferry service connects Zamami and Aka islands throughout the day. The crossing takes about 15 minutes.</p>
+            <p lang="ja" class="hidden">座間味島と阿嘉島の間は1日に数便のフェリーが運航しています。所要時間は約15分です。</p>
+            
+            <h3 lang="en">Between Zamami and Tokashiki Islands</h3>
+            <h3 lang="ja" class="hidden">座間味島と渡嘉敷島間</h3>
+            <p lang="en">There is no direct ferry between Zamami and Tokashiki. You need to return to Tomari Port on Okinawa Main Island and transfer.</p>
+            <p lang="ja" class="hidden">座間味島と渡嘉敷島の間には直行便はありません。沖縄本島の泊港まで戻って乗り換える必要があります。</p>
+            
+            <h3 lang="en">Inter-Island Ferry Schedule</h3>
+            <h3 lang="ja" class="hidden">島間フェリースケジュール</h3>
+            <table class="ferry-table">
+                <thead>
+                    <tr>
+                        <th lang="en">Route</th>
+                        <th lang="ja" class="hidden">航路</th>
+                        <th lang="en">Frequency</th>
+                        <th lang="ja" class="hidden">運行頻度</th>
+                        <th lang="en">Duration</th>
+                        <th lang="ja" class="hidden">所要時間</th>
+                        <th lang="en">Fare (¥)</th>
+                        <th lang="ja" class="hidden">運賃 (¥)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Zamami ↔ Aka</td>
+                        <td>4-5 times daily</td>
+                        <td>15 min</td>
+                        <td>400</td>
+                    </tr>
+                    <tr>
+                        <td>Zamami ↔ Tokashiki</td>
+                        <td>No direct service</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section class="card">
+            <h2 lang="en">Island Information</h2>
+            <h2 lang="ja" class="hidden">島の情報</h2>
+            
+            <div class="island-section">
+                <h3 lang="en">Zamami Island</h3>
+                <h3 lang="ja" class="hidden">座間味島</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeLURA3EAITigpWtYTYKGfdjLSptFTYNchI8CW4E-p3DhEkLBxzYfHjZH6&s=10">
+                <p lang="en">Zamami is the largest of the three main Kerama Islands, known for its beautiful beaches and whale watching in winter.</p>
+                <p lang="ja" class="hidden">座間味島は慶良間諸島の主要3島の中で最も大きく、美しいビーチと冬のホエールウォッチングで知られています。</p>
+                
+                <h4 lang="en">Main Beaches</h4>
+                <h4 lang="ja" class="hidden">主なビーチ</h4>
+                <ul class="beach-list">
+                    <li lang="en"><strong>Furuzamami Beach</strong> - Famous for its white sand and clear waters, great for snorkeling</li>
+                    <li lang="ja" class="hidden"><strong>古座間味ビーチ</strong> - 白い砂と透明な海で有名、シュノーケリングに最適</li>
+                    <li lang="en"><strong>Ama Beach</strong> - Smaller beach near the village, good for swimming</li>
+                    <li lang="ja" class="hidden"><strong>阿真ビーチ</strong> - 集落近くの小さなビーチ、泳ぐのに適しています</li>
+                </ul>
+                
+                <h4 lang="en">Facilities</h4>
+                <h4 lang="ja" class="hidden">施設</h4>
+                <ul class="facility-list">
+                    <li lang="en">Ferry Terminal (connects to Aka and Tomari Port)</li>
+                    <li lang="ja" class="hidden">フェリー乗り場 (阿嘉島と泊港への連絡)</li>
+                    <li lang="en">Tourist Information Center</li>
+                    <li lang="ja" class="hidden">観光案内所</li>
+                    <li lang="en">Rental shops (bicycles, snorkel gear)</li>
+                    <li lang="ja" class="hidden">レンタルショップ (自転車、シュノーケル用具)</li>
+                    <li lang="en">Several restaurants and cafes</li>
+                    <li lang="ja" class="hidden">いくつかのレストランとカフェ</li>
+                </ul>
+            </div>
+            
+            <div class="island-section">
+                <h3 lang="en">Aka Island</h3>
+                <h3 lang="ja" class="hidden">阿嘉島</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPipEcuPpVf4PANI-POTHXo-P3SchcjPncixU00QzXFqclvmGdeNmhQPop&s=10">
+                <p lang="en">Aka is a smaller island connected to Zamami by a short ferry ride, known for its friendly deer population.</p>
+                <p lang="ja" class="hidden">阿嘉島は座間味島から短いフェリーで行ける小さな島で、人懐っこい鹿の群れで知られています。</p>
+                
+                <h4 lang="en">Main Beaches</h4>
+                <h4 lang="ja" class="hidden">主なビーチ</h4>
+                <ul class="beach-list">
+                    <li lang="en"><strong>Nishibama Beach</strong> - Long sandy beach with shallow waters</li>
+                    <li lang="ja" class="hidden"><strong>ニシバマビーチ</strong> - 浅瀬が続く長い砂浜</li>
+                    <li lang="en"><strong>Hizushi Beach</strong> - Smaller beach popular with locals</li>
+                    <li lang="ja" class="hidden"><strong>ヒヅシビーチ</strong> - 地元の人に人気の小さなビーチ</li>
+                </ul>
+                
+                <h4 lang="en">Facilities</h4>
+                <h4 lang="ja" class="hidden">施設</h4>
+                <ul class="facility-list">
+                    <li lang="en">Ferry Terminal (connects to Zamami and Tomari Port)</li>
+                    <li lang="ja" class="hidden">フェリー乗り場 (座間味島と泊港への連絡)</li>
+                    <li lang="en">Small village with restaurants</li>
+                    <li lang="ja" class="hidden">レストランがある小さな集落</li>
+                    <li lang="en">Bicycle rental available</li>
+                    <li lang="ja" class="hidden">自転車レンタルあり</li>
+                </ul>
+            </div>
+            
+            <div class="island-section">
+                <h3 lang="en">Tokashiki Island</h3>
+                <h3 lang="ja" class="hidden">渡嘉敷島</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLk4gHaJRvLXINbwZ6cV7-_tK_zVZnDIJKnXNBaZ7hhC81YF-rCnKRdi-6&s=10">
+                <p lang="en">The closest Kerama Island to Okinawa Main Island, known for its stunning beaches and marine activities.</p>
+                <p lang="ja" class="hidden">沖縄本島に最も近い慶良間諸島の島で、素晴らしいビーチとマリンスポーツで知られています。</p>
+                
+                <h4 lang="en">Main Beaches</h4>
+                <h4 lang="ja" class="hidden">主なビーチ</h4>
+                <ul class="beach-list">
+                    <li lang="en"><strong>Tokashiku Beach</strong> - Beautiful crescent-shaped beach</li>
+                    <li lang="ja" class="hidden"><strong>渡嘉志久ビーチ</strong> - 美しい三日月形のビーチ</li>
+                    <li lang="en"><strong>Aharen Beach</strong> - Most popular beach with facilities</li>
+                    <li lang="ja" class="hidden"><strong>阿波連ビーチ</strong> - 施設が整った最も人気のあるビーチ</li>
+                </ul>
+                
+                <h4 lang="en">Facilities</h4>
+                <h4 lang="ja" class="hidden">施設</h4>
+                <ul class="facility-list">
+                    <li lang="en">Ferry Terminal (connects to Tomari Port)</li>
+                    <li lang="ja" class="hidden">フェリー乗り場 (泊港への連絡)</li>
+                    <li lang="en">Tourist Information Center</li>
+                    <li lang="ja" class="hidden">観光案内所</li>
+                    <li lang="en">Several restaurants near the port and beaches</li>
+                    <li lang="ja" class="hidden">港とビーチ近くにいくつかのレストラン</li>
+                    <li lang="en">Rental shops (snorkel gear, kayaks)</li>
+                    <li lang="ja" class="hidden">レンタルショップ (シュノーケル用具、カヤック)</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- 最初に戻るボタン -->
+        <div class="to-top-container">
+            <a href="#" class="to-top-button" id="main-to-top">
+                <span lang="en"><i class="fas fa-arrow-up"></i> Back to Top</span>
+                <span lang="ja" class="hidden"><i class="fas fa-arrow-up"></i> 最初に戻る</span>
+            </a>
+        </div>
     </div>
     
     <footer>
@@ -341,7 +580,7 @@
     </div>
     
     <script>
-        // 日付設定
+        // Set current date
         const today = new Date();
         document.getElementById('current-date').textContent = today.toLocaleDateString('en-US', { 
             year: 'numeric', 
@@ -354,13 +593,14 @@
             day: 'numeric' 
         });
         
-        // テーマ切り替え
+        // Theme toggle
         const themeToggle = document.getElementById('theme-toggle');
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', newTheme);
             
+            const isEnglish = document.documentElement.getAttribute('lang') === 'en';
             if (newTheme === 'dark') {
                 themeToggle.querySelector('span[lang="en"]').textContent = 'Dark Mode';
                 themeToggle.querySelector('span[lang="ja"]').textContent = 'ダークモード';
@@ -370,13 +610,14 @@
             }
         });
         
-        // 言語切り替え
+        // Language toggle
         const langToggle = document.getElementById('lang-toggle');
         langToggle.addEventListener('click', () => {
             const currentLang = document.documentElement.getAttribute('lang');
             const newLang = currentLang === 'en' ? 'ja' : 'en';
             document.documentElement.setAttribute('lang', newLang);
             
+            // Toggle visibility of language-specific elements
             document.querySelectorAll('[lang="en"]').forEach(el => {
                 el.classList.toggle('hidden', newLang !== 'en');
             });
@@ -384,6 +625,7 @@
                 el.classList.toggle('hidden', newLang !== 'ja');
             });
             
+            // Update button text
             if (newLang === 'en') {
                 langToggle.querySelector('span[lang="en"]').textContent = '日本語';
                 langToggle.querySelector('span[lang="ja"]').textContent = 'English';
@@ -392,105 +634,105 @@
                 langToggle.querySelector('span[lang="ja"]').textContent = '英語';
             }
             
-            updateInstallButtonText();
+            // Update theme button text
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                themeToggle.querySelector('span[lang="en"]').textContent = 'Dark Mode';
+                themeToggle.querySelector('span[lang="ja"]').textContent = 'ダークモード';
+            } else {
+                themeToggle.querySelector('span[lang="en"]').textContent = 'Light Mode';
+                themeToggle.querySelector('span[lang="ja"]').textContent = 'ライトモード';
+            }
+            
+            // Update install button text
+            const installButton = document.getElementById('install-button');
+            if (installButton) {
+                if (newLang === 'en') {
+                    installButton.querySelector('span[lang="en"]').textContent = 'Install App';
+                    installButton.querySelector('span[lang="ja"]').textContent = 'アプリをインストール';
+                } else {
+                    installButton.querySelector('span[lang="en"]').textContent = 'Install';
+                    installButton.querySelector('span[lang="ja"]').textContent = 'インストール';
+                }
+            }
         });
         
-        // トップに戻るボタン
+        // Back to top buttons
         const backToTop = document.getElementById('back-to-top');
         const mainToTop = document.getElementById('main-to-top');
         
         window.addEventListener('scroll', () => {
-            backToTop.style.display = window.pageYOffset > 300 ? 'flex' : 'none';
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
         });
         
         backToTop.addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
         
         mainToTop.addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
         
-        // PWAインストール機能
-        let deferredPrompt;
-        const installButton = document.getElementById('install-button');
-        
-        // インストールボタンテキスト更新
-        function updateInstallButtonText() {
-            const currentLang = document.documentElement.getAttribute('lang');
-            const enText = installButton.querySelector('span[lang="en"]');
-            const jaText = installButton.querySelector('span[lang="ja"]');
-            
-            if (currentLang === 'ja') {
-                enText.classList.add('hidden');
-                jaText.classList.remove('hidden');
-            } else {
-                enText.classList.remove('hidden');
-                jaText.classList.add('hidden');
-            }
-        }
-        
-        // beforeinstallpromptイベント処理
-        window.addEventListener('beforeinstallprompt', (e) => {
-            console.log('beforeinstallprompt event triggered');
-            e.preventDefault();
-            deferredPrompt = e;
-            
-            // インストールボタンを表示
-            installButton.classList.remove('hidden');
-            updateInstallButtonText();
-            
-            // 5秒後に自動で非表示にする
-            setTimeout(() => {
-                if (installButton && !installButton.classList.contains('hidden')) {
-                    installButton.classList.add('hidden');
+        // Inline manifest (PWA)
+        const manifest = {
+            "name": "Kerama Islands Guide",
+            "short_name": "KeramaGuide",
+            "description": "Tourism guide for Okinawa's Kerama Islands",
+            "start_url": ".",
+            "display": "standalone",
+            "background_color": "#006D8F",
+            "theme_color": "#006D8F",
+            "icons": [
+                {
+                    "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23006D8F'/><circle cx='50' cy='30' r='15' fill='white'/><path d='M50 45 L45 65 L55 65 Z' fill='white'/><path d='M50 50 L35 30 L40 25 L50 40 L60 25 L65 30 Z' fill='white'/></svg>",
+                    "sizes": "100x100",
+                    "type": "image/svg+xml"
+                },
+                {
+                    "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' fill='%23006D8F'/><circle cx='96' cy='58' r='29' fill='white'/><path d='M96 86 L86 125 L106 125 Z' fill='white'/><path d='M96 96 L74 58 L77 48 L96 77 L115 48 L118 58 Z' fill='white'/></svg>",
+                    "sizes": "192x192",
+                    "type": "image/svg+xml"
+                },
+                {
+                    "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' fill='%23006D8F'/><circle cx='256' cy='154' r='77' fill='white'/><path d='M256 231 L231 321 L281 321 Z' fill='white'/><path d='M256 256 L197 154 L205 128 L256 205 L307 128 L315 154 Z' fill='white'/></svg>",
+                    "sizes": "512x512",
+                    "type": "image/svg+xml"
                 }
-            }, 5000);
-        });
+            ]
+        };
         
-        // インストールボタンクリック処理
-        installButton.addEventListener('click', async () => {
-            if (!deferredPrompt) {
-                console.log('No deferred prompt available');
-                return;
-            }
-            
-            console.log('Showing install prompt');
-            deferredPrompt.prompt();
-            
-            const { outcome } = await deferredPrompt.userChoice;
-            console.log(`User response: ${outcome}`);
-            
-            deferredPrompt = null;
-            installButton.classList.add('hidden');
-        });
+        // Set the manifest
+        const manifestElement = document.createElement('link');
+        manifestElement.rel = 'manifest';
+        manifestElement.href = 'data:application/manifest+json,' + encodeURIComponent(JSON.stringify(manifest));
+        document.head.appendChild(manifestElement);
         
-        // アプリインストール後の処理
-        window.addEventListener('appinstalled', () => {
-            console.log('PWA was installed');
-            installButton.classList.add('hidden');
-            deferredPrompt = null;
-        });
-        
-        // Service Worker登録
+        // Service worker registration (inline)
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                // シンプルなService Workerコード
-                const swCode = `
-                    self.addEventListener('install', (event) => {
-                        console.log('Service Worker installing');
+                // Create an inline service worker
+                const swUrl = URL.createObjectURL(new Blob([
+                    `self.addEventListener('install', (event) => {
                         event.waitUntil(self.skipWaiting());
                     });
                     
                     self.addEventListener('activate', (event) => {
-                        console.log('Service Worker activating');
                         event.waitUntil(self.clients.claim());
                     });
                     
                     self.addEventListener('fetch', (event) => {
-                        console.log('Fetching:', event.request.url);
                         event.respondWith(
                             fetch(event.request).catch(() => {
                                 return new Response('You are offline. Please check your internet connection.', {
@@ -498,49 +740,62 @@
                                 });
                             })
                         );
-                    });
-                `;
+                    });`
+                ], { type: 'application/javascript' }));
                 
-                const blob = new Blob([swCode], { type: 'application/javascript' });
-                const swUrl = URL.createObjectURL(blob);
-                
-                navigator.serviceWorker.register(swUrl, { scope: './' })
+                navigator.serviceWorker.register(swUrl)
                     .then(registration => {
-                        console.log('ServiceWorker registration successful with scope:', registration.scope);
+                        console.log('ServiceWorker registration successful');
                     })
-                    .catch(error => {
-                        console.log('ServiceWorker registration failed:', error);
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
                     });
             });
         }
         
-        // PWAインストール可能かチェック
-        function checkPWAInstallable() {
-            if (window.matchMedia('(display-mode: standalone)').matches) {
-                console.log('Already installed as PWA');
-                installButton.classList.add('hidden');
-                return;
-            }
-            
-            // iOSではbeforeinstallpromptが発火しないので特別処理
-            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
-                         (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-            
-            if (isIOS) {
-                console.log('iOS device detected - showing custom install instructions');
-                installButton.classList.remove('hidden');
-                updateInstallButtonText();
-                
-                installButton.addEventListener('click', () => {
-                    alert(document.documentElement.getAttribute('lang') === 'ja' ? 
-                        'Safariで「共有」→「ホーム画面に追加」を選択してください' : 
-                        'In Safari, tap "Share" then "Add to Home Screen"');
-                });
-            }
-        }
+        // Install prompt handling
+        let deferredPrompt;
+        const installButton = document.getElementById('install-button');
         
-        // 初期化時にチェック
-        checkPWAInstallable();
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Prevent the mini-infobar from appearing on mobile
+            e.preventDefault();
+            // Stash the event so it can be triggered later
+            deferredPrompt = e;
+            // Show the install button
+            installButton.classList.remove('hidden');
+            
+            // Update button text based on current language
+            const currentLang = document.documentElement.getAttribute('lang');
+            if (currentLang === 'ja') {
+                installButton.querySelector('span[lang="en"]').classList.add('hidden');
+                installButton.querySelector('span[lang="ja"]').classList.remove('hidden');
+            } else {
+                installButton.querySelector('span[lang="en"]').classList.remove('hidden');
+                installButton.querySelector('span[lang="ja"]').classList.add('hidden');
+            }
+        });
+        
+        installButton.addEventListener('click', (e) => {
+            // Hide the install button
+            installButton.classList.add('hidden');
+            // Show the install prompt
+            deferredPrompt.prompt();
+            // Wait for the user to respond to the prompt
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('User accepted the install prompt');
+                } else {
+                    console.log('User dismissed the install prompt');
+                }
+                deferredPrompt = null;
+            });
+        });
+        
+        window.addEventListener('appinstalled', (evt) => {
+            console.log('App was installed');
+            installButton.classList.add('hidden');
+        });
     </script>
 </body>
 </html>
